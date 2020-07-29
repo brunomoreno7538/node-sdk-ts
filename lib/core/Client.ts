@@ -1,5 +1,5 @@
 import https from 'https'
-import { HttpsConfigModel, Data, HttpsClientModel, EnviromentModel, Callback } from './protocols/index'
+import { HttpsConfigModel, HttpsClientModel, EnviromentModel, Callback } from './protocols/index'
 
 /**
  * Class HttpsConfig - set path & method config for a https request
@@ -60,7 +60,7 @@ export class Enviroment {
  */
 export class HttpsClient implements HttpsClientModel {
   private readonly config: HttpsConfigModel
-  private readonly requestData: Data
+  private readonly requestData: any
   private readonly callback: Callback
 
   /**
@@ -69,7 +69,7 @@ export class HttpsClient implements HttpsClientModel {
  * @param {Data} data
  * @param {Callback} cb
  */
-  public constructor (config: HttpsConfigModel, data: Data, cb: Callback) {
+  public constructor (config: HttpsConfigModel, data: any, cb: Callback) {
     this.config = config
     this.requestData = data
     this.callback = cb

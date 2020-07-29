@@ -17,7 +17,7 @@ const data = {
   type: paymee.CheckOutType.Redirect,
   currency: paymee.Currency.USD,
   amount: 1,
-  referenceCode: 'abcd',
+  referenceCode: 'abcdefg',
   maxAge: 120,
   paymentMethod: paymee.PaymentMethod.SANTANDER_TRANSFER,
   callbackURL: '',
